@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
@@ -6,7 +5,7 @@ const Card = ({ card }) => {
 
   return (
     <div className="flex flex-col justify-between px-10 py-3 border-2 rounded-lg border-[#1313132d] transition hover:scale-105">
-      <Link to={`/${bookId}`}>
+      <Link to={`/CardDetails/${bookId}`}>
         <div className="flex items-center justify-center">
           <img className="h-40 w-30 rounded-lg" src={card.image} alt="" />
         </div>

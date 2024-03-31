@@ -22,7 +22,7 @@ const Nav = () => {
             </NavLink>
           </ul>
         </div>
-        <div className="flex lg:flex-row sm:flex-col gap-3">
+        <div className="flex lg:flex-row md:flex-row flex-col gap-3">
           <button className="btn btn-success text-white">Sign In</button>
           <button className="btn btn-info text-white">Sign Up</button>
         </div>
