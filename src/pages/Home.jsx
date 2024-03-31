@@ -1,9 +1,9 @@
+
 import { useLoaderData } from 'react-router-dom';
 import Banner from "../components/Banner";
 import Card from '../components/Card';
 
 const Home = () => {
-    
     const cards = useLoaderData();
 
     // Ensure cards is an array before mapping
