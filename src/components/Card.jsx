@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 
 const Card = ({ card }) => {
-  const { bookId, tags, bookName, author, category, rating, image } = card; // Destructure props
+  const { bookId, tags, bookName, author, category, rating, image } = card;
 
   // Check if tags is an array before mapping
   const renderTags = Array.isArray(tags) && tags.map((tag, index) => (
@@ -19,12 +19,12 @@ const Card = ({ card }) => {
     <div className="flex flex-col justify-between px-10 py-3 border-2 rounded-lg border-[#1313132d] transition hover:scale-105">
       <Link to={`/${bookId}`}>
         <div className="flex items-center justify-center">
-          <img className="h-40 w-30 rounded-lg" src={image} alt={bookName} /> {/* Provide alt text */}
+          <img className="h-40 w-30 rounded-lg" src={image} alt={bookName} />
         </div>
 
         <div className="flex flex-col h-full">
           <div className="flex flex-wrap gap-3 py-2">
-            {renderTags} {/* Render tags conditionally */}
+            {renderTags} 
           </div>
 
           <div>
@@ -37,7 +37,7 @@ const Card = ({ card }) => {
                 <p>{rating}</p>
                 <img
                   className="h-3"
-                  src="../../public/star-outline-svgrepo-com.svg" // Verify image source
+                  src="../../public/star-outline-svgrepo-com.svg" 
                   alt="Star Icon"
                 />
               </div>
@@ -53,7 +53,7 @@ const Card = ({ card }) => {
 Card.propTypes = {
   card: PropTypes.shape({
     bookId: PropTypes.number.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string), // Ensure tags is an array of strings
+    tags: PropTypes.arrayOf(PropTypes.string),
     bookName: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
