@@ -4,12 +4,14 @@ import Footer from "../components/Footer";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <div className="h-16">
         <Nav />
       </div>
       {/* Packet the pages */}
-      <Outlet />
+      <div style={{ flex: '1' }}>
+        <Outlet />
+      </div>
 
       <div className="mt-[6%]">
         <Footer />

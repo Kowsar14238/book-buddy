@@ -1,12 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom";
 
 const CardDetails = () => {
+
   const cards = useLoaderData();
   const { bookId } = useParams();
   // console.log(bookId, cards);
 
   const card = cards.find((card) => card.bookId === parseInt(bookId));
-  console.log(card, bookId);
+  // console.log(card, bookId);
   // const { bookId, tags, bookName, author, category, rating } = cardInfo;
 
   return (

@@ -1,5 +1,9 @@
+import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const ListedBooks = () => {
+  const [tabIndex, setTabIndex] = useState(0)
+
   return (
     <div>
       <div className="flex flex-col justify-center items-center m-[1%] ">
@@ -21,7 +25,22 @@ const ListedBooks = () => {
         </div>
       </div>
 
-      <div role="tablist" className="tabs tabs-lifted">
+      {/* Tabs */}
+      <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+        <Link to= '' onClick={() => setTabIndex(0)}
+          className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border border-b-0': 'border-b-0'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}
+        >
+          <span>Read Books</span>
+        </Link>
+        <Link to={`WishlistBooks`} onClick={() => setTabIndex(1)}
+          className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 1 ? 'border border-b-0': 'border-b-0'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}
+        >
+          <span>Wishlist Books</span>
+        </Link>
+      </div>
+      <Outlet />
+
+      {/* <div role="tablist" className="tabs tabs-lifted">
         <input
           type="radio"
           name="my_tabs_2"
@@ -30,10 +49,7 @@ const ListedBooks = () => {
           aria-label="Read Books"
           checked
         />
-        <div
-          role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-        >
+        <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
           Read Books
         </div>
 
@@ -44,13 +60,10 @@ const ListedBooks = () => {
           className="tab"
           aria-label="Wishlist Books"
         />
-        <div
-          role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-        >
+        <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
           Wishlist Books
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
