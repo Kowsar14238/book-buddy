@@ -21,9 +21,7 @@ const Home = () => {
             <Banner />
             <h2 className="text-center font-semibold text-4xl py-8">Books</h2>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-rows-1 gap-8 p-2'>
-                {
-                    cards.map(card => <Card key={card.id} card={card} />)
-                }
+                {cards.map(card => <Card key={card.id} card={card} />)}
             </div>
         </div>
     );

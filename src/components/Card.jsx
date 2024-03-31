@@ -24,7 +24,7 @@ const Card = ({ card }) => {
 
         <div className="flex flex-col h-full">
           <div className="flex flex-wrap gap-3 py-2">
-            {renderTags} 
+            {renderTags}
           </div>
 
           <div>
@@ -35,9 +35,10 @@ const Card = ({ card }) => {
               <p>{category}</p>
               <div className="flex items-center justify-center gap-1">
                 <p>{rating}</p>
+                {/* Assuming this is the correct path to the star icon */}
                 <img
                   className="h-3"
-                  src="../../public/star-outline-svgrepo-com.svg" 
+                  src="../../public/star-outline-svgrepo-com.svg"
                   alt="Star Icon"
                 />
               </div>
