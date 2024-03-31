@@ -14,12 +14,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch('../public/BookData.json'),
+        loader: () => fetch('/BookData.json'),
         element: <Home />,
       },
       {
         path: '/:bookId',
-        loader: () => fetch('../public/BookData.json'),
+        loader: () => fetch('/BookData.json'),
         element: <CardDetails />,
       },
       {
