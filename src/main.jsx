@@ -8,7 +8,7 @@ import MainLayout from "./layouts/MainLayout.jsx";
 import CardDetails from "./pages/CardDetails.jsx";
 import ReadBooks from "./components/ReadBooks.jsx";
 import WishlistBooks from "./components/WishlistBooks.jsx";
-
+import Contact from "./pages/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +44,10 @@ const router = createBrowserRouter([
         path: "/PagesRead",
         element: <PagesRead />,
       },
+      {
+        path: "/Contact",
+        element: <Contact />,
+      }
     ],
   },
 ]);

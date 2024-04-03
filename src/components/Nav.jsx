@@ -20,6 +20,9 @@ const Nav = () => {
             <NavLink to='/PagesRead' className={({isActive}) => isActive ? 'font-bold text-lime-700 border-2 border-lime-500 px-2' : 'font-bold' }>
             Pages to Read
             </NavLink>
+            <NavLink to='/Contact' className={({isActive}) => isActive ? 'font-bold text-lime-700 border-2 border-lime-500 px-2' : 'font-bold' }>
+            Contact
+            </NavLink>
           </ul>
         </div>
         <div className="flex lg:flex-row md:flex-row flex-col gap-3">
